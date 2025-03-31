@@ -108,7 +108,7 @@ def process_ocr(image_path, output_dir="./ocr_results", preprocess=False):
     return ocr_response
 
 if __name__ == "__main__":
-    image_path = "./test_docs/t7.jpg"
+    image_path = "./test_docs/t2.jpg"
     
     # Set preprocess=True if you want to apply image preprocessing
     process_ocr(image_path, preprocess=True)

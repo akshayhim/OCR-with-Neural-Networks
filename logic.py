@@ -1,27 +1,13 @@
 import os
-from flask import Flask, flash, request, redirect, url_for,render_template
 from werkzeug.utils import secure_filename
 from tensorflow.keras.preprocessing.image import load_img , img_to_array
 from keras.models import load_model
 #import tensorflow as tf
 import numpy as np
 import pandas as pd
-import pickle
 from PIL import Image
-import pickle
 
 #label=pd.read_csv("labels.csv",header=2)
-
-UPLOAD_FOLDER = 'C:/Users/Rumit/Downloads/Git/English Printed/Static/'
-ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
-s = pickle.load( open("Classes.pkl",'rb'))
-
-app = Flask(__name__)
-app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
-model = load_model('Model2.hdf5')
-def allowed_file(filename):
-    return '.' in filename and \
-           filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 def multi(img1):
     img1 = img_to_array(img1)
